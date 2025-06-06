@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: docuquery_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: docuquery
+      POSTGRES_PASSWORD: docuquery
+      POSTGRES_DB: docuquery
+    ports:
+      - 5400:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
