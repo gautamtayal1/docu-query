@@ -21,6 +21,7 @@ class RawDocument(Base):
   source_uri = Column(Text, nullable=False)
   file_hash = Column(String(64), nullable=False)
   file_size = Column(BigInteger, nullable=False)
+  file_type = Column(String(10), nullable=False)
   last_modified = Column(TIMESTAMP, nullable=False)
   ingest_ts = Column(TIMESTAMP, server_default=text("NOW()"), nullable=False)
   parse_status = Column(String(10), nullable=False, server_default="pending")

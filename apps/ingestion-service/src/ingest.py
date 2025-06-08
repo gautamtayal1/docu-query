@@ -196,7 +196,7 @@ async def ingest_files(files: list[UploadFile] = File(...)):
   responses = []
   errors = []
   
-  async with get_db_session as db:
+  async with get_db_session() as db:
     for i, uploaded_file in enumerate(files):
       try:
         result = await process_single_file(uploaded_file, db)

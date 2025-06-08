@@ -12,7 +12,7 @@ def test_upload_pdf():
     try:
         # Make the POST request
         response = requests.post(
-            'http://localhost:8000/ingest/',
+            'http://localhost:8080/ingest/',
             files=files
         )
         

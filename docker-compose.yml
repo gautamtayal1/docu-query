@@ -1,4 +1,4 @@
-services:
+ services:
   postgres:
     image: postgres:15
     container_name: docuquery_postgres
